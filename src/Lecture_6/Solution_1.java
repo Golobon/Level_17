@@ -4,11 +4,15 @@ public class Solution_1 {
     public static void main(String[] args) {
     }
 
-    public class Horse {
+    public class Pet {
 
     }
 
-    public class Pegasus extends Horse {
+    public class Cat extends Pet {
+
+    }
+
+    public class Dog extends Pet {
 
     }
 }
