@@ -2,22 +2,37 @@ package Lecture_6;
 
 public class Test {
     public static void main(String[] args) {
-        Test test = new Test();
-        test.sayHello();
+        System.out.println(getObjectType(new Cat()));
+        System.out.println(getObjectType(new Tiger()));
+        System.out.println(getObjectType(new Lion()));
+        System.out.println(getObjectType(new Bull()));
+        System.out.println(getObjectType(new Pig()));
     }
 
-    public void sayHello() {
-        System.out.println("Hello!");
+    public static String getObjectType(Object o) {
+
+        switch (o.getClass().getSimpleName())
+        {
+            case "Cat" : return "Кот";
+            case "Tiger" : return "Тигр";
+            case "Lion" : return "Лев";
+            case "Bull" : return "Бык";
+            default: return "Животное";
+        }
     }
 
-    public void sayGoodBuy() {
-        System.out.println("sayGoodBuy!");
+    public static class Cat {
     }
 
+    public static class Tiger {
+    }
 
-    public interface CanFly {
-        public void sayHello();
+    public static class Lion {
+    }
 
-        public void sayGoodBuy();
+    public static class Bull {
+    }
+
+    public static class Pig {
     }
 }
