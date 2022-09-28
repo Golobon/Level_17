@@ -2,13 +2,11 @@ package Lecture_1;
 
 class Tiger extends Cat
 {
-    public String getName()
+    public Object getMyParent()
     {
-        return "Vasya Tiger";
-    }
-
-    public String getBoo()
-    {
-        return "Vasya Tiger";
+        if (this.parent != null)
+            return this.parent;
+        else
+            return "я - сирота";
     }
 }

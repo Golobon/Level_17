@@ -2,8 +2,13 @@ package Lecture_1;
 
 class Cat
 {
-    protected String getName()
+    public Cat parent;
+    public Cat getMyParent()
     {
-        return "Vaska";
+        return this.parent;
+    }
+    public void setMyParent(Cat cat)
+    {
+        this.parent = cat;
     }
 }
