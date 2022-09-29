@@ -1,4 +1,4 @@
-package Solution_2;
+package Lecture_2;
 
 public class Solution {
     //добавьте классы Goose и Dragon тут
