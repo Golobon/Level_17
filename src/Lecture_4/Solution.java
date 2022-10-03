@@ -20,15 +20,13 @@ public class Solution {
 
     public static CanFly result;
 
-    public static void reset() {
+    public static void reset() throws IOException {
         BufferedReader bR = new BufferedReader(new InputStreamReader(System.in));
         try {
             String value = bR.readLine();
             switch (value) {
-                case "helicopter":
-                    result = new Helicopter();
-                    break;
-                case "plane": {
+                case "helicopter" -> result = new Helicopter();
+                case "plane" -> {
                     int res = Integer.parseInt(bR.readLine());
                     result = new Plane(res);
                     break;
@@ -37,6 +35,7 @@ public class Solution {
         } catch (IOException e) {
             throw new RuntimeException(e);
         }
+        bR.close();
         //add your code here - добавьте код тут
     }
 }
