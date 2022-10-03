@@ -15,7 +15,11 @@ public class Solution {
 
     static {
         //add your code here - добавьте код тут
-        reset();
+        try {
+            reset();
+        } catch (IOException e) {
+            throw new RuntimeException(e);
+        }
     }
 
     public static CanFly result;
