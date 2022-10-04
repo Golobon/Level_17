@@ -21,10 +21,16 @@ public class Solution_10 {
     }
 
     public static String factorial(int n) {
-        BigInteger result2 = BigInteger.valueOf(1L);
-        for (int i = 1; i <= n; i++){
-            result2 = result2.multiply(BigInteger.valueOf(i));
+        if (n > 0) {
+            BigDecimal result = new BigDecimal(1);
+            BigDecimal a;
+            for (int i = 2; i <= n; i++) {
+                a = new BigDecimal(i); // Преобразовать i в тип BigDecimal
+                result = result.multiply(a); // Не использовать result * a, потому что тип BigDecimal не определяет * операцию
+            }
+            return result.toString();
+        } else {
+            return "0";
         }
-        return result2.toString();
     }
 }
