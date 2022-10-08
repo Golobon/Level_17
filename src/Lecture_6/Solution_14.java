@@ -5,11 +5,11 @@ import java.util.Scanner;
 public class Solution_14 {
     public static void main(String[] args) {
 
-        Scanner Scanner = new Scanner(System.in);
+        Scanner scanner = new Scanner(System.in);
 
-        int a = Scanner.nextInt();
-        int b = Scanner.nextInt();
-        int c = Scanner.nextInt();
+        int a = scanner.nextInt();
+        int b = scanner.nextInt();
+        int c = scanner.nextInt();
 
         if ((a == b) && (b == c) && (a == c)) {
             System.out.println(a + " " + b + " " + c);
@@ -21,6 +21,7 @@ public class Solution_14 {
             System.out.println(c + " " + a);
         }
 
+        scanner.close();
 
         //напишите тут ваш код
     }
