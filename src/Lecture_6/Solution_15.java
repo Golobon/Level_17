@@ -7,8 +7,10 @@ public class Solution_15 {
 
         System.out.println("*****************");
 
+
         for (StackTraceElement element : Thread.currentThread().getStackTrace()) {
-            System.out.println(element);
+            System.out.println("main: " + element);
+
         }
     }
 
@@ -17,7 +19,8 @@ public class Solution_15 {
         @Override
         public void run() {
             for (StackTraceElement element : Thread.currentThread().getStackTrace()) {
-                System.out.println(element);
+                System.out.println();
+                System.out.println("run: " + element);
             }
         }
     }
