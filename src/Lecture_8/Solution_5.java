@@ -18,9 +18,7 @@ public class Solution_5 {
     }
 
     public static void ourInterruptMethod() {
-        for (Thread s : threads) {
-            s.interrupt();
-        }
+        threads.forEach(s -> s.interrupt());
     }
 
     private static void initThreadsAndStart() {
