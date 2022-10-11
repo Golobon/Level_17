@@ -8,7 +8,7 @@ import java.util.List;
 */
 
 public class Solution_5 {
-    public static byte threadCount = 3;
+    public static byte threadCount = 4;
     static List<Thread> threads = new ArrayList<Thread>(threadCount);
 
     public static void main(String[] args) throws InterruptedException {
