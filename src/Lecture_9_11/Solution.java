@@ -38,7 +38,7 @@ public class Solution {
     public static class ReadFileThread extends Thread implements ReadFileInterface {
         public String fullFileName;
 
-        public StringBuilder sB = new StringBuilder().append("");
+        public String sB;
         @Override
         public void setFileName(String fullFileName) {
             this.fullFileName = fullFileName;
@@ -46,8 +46,7 @@ public class Solution {
 
         @Override
         public String getFileContent() {
-            if (!sB.toString().equals("")) return sB.toString().substring(0, sB.length() - 1);
-            else return "";
+            return sB.toString().substring(0, sB.length() - 1);
         }
 
         @Override
@@ -57,10 +56,12 @@ public class Solution {
 
         @Override
         public void run() {
+            sB = "";
             try {
                 BufferedReader bR2 = new BufferedReader(new FileReader(fullFileName));
                 while (bR2.ready()) {
-                    bR2.lines().forEach((o) -> sB.append(o).append(" "));
+                    String x = bR2.readLine();
+                    sB += x + " ";
                 } Thread.currentThread().interrupt();
             } catch (IOException e) {
                 throw new RuntimeException(e);
